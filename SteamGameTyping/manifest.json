@@ -1,0 +1,21 @@
+{
+  "name": "SteamGameTyping",
+  "description": "SteamGameTyping は、Steam で所有しているゲームを使ってなにか遊ぼうという目的の Chrome Extension です。",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["https://steamcommunity.com/profiles/*/games?tab=all"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "sounds/*.mp3"
+    ],
+    "matches": [
+      "https://steamcommunity.com/*"
+    ]
+  }],
+  "manifest_version": 3
+}
